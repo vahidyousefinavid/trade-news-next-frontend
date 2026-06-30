@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  trade-news-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        DOMAIN_API: http://trade-news-api:4001
+        NEXT_PUBLIC_API_URL: http://trade-news-api:4001
+    container_name: trade-news-frontend
+    restart: unless-stopped
+    ports:
+      - "3030:3000"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - nginx-network
+
+networks:
+  nginx-network:
+    external: true
