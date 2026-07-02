@@ -51,7 +51,7 @@ export default async function CategoryPage({ params }: Props) {
           </Link>
         </div>
       ) : (
-        <div className="container" style={{ padding: '2.5rem 1.5rem' }}>
+        <div className="container inner-page-container">
 
           {/* Top featured */}
           {featured && (

@@ -80,7 +80,7 @@ export default async function NewsPage({ searchParams }: Props) {
           </Link>
         </div>
       ) : (
-        <div className="container" style={{ padding: '2.25rem 1.5rem' }}>
+        <div className="container inner-page-container">
           <div style={{ display: 'flex', gap: '2.5rem', alignItems: 'flex-start' }}>
 
             {/* ── Main column ── */}

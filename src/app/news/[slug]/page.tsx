@@ -44,8 +44,8 @@ export default async function ArticlePage({ params }: Props) {
         </div>
       )}
 
-      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '2.5rem 1.5rem' }}>
-        <div style={{ display: 'flex', gap: '3.5rem', alignItems: 'flex-start' }}>
+      <div className="article-container">
+        <div className="article-layout">
 
           {/* ── Article column ── */}
           <article style={{ flex: 1, minWidth: 0, maxWidth: '52rem' }}>
