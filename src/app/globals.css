@@ -564,6 +564,17 @@ html[lang="en"] body { font-family: 'Inter', Arial, sans-serif; direction: ltr; 
   .card-list-num { display: none; }
   .cat-small-cards { grid-template-columns: 1fr; }
   .latest-grid-col { grid-template-columns: 1fr; }
+  .container { padding: 0 1rem; }
+  .footer-main { padding: 2rem 1rem 1.5rem; }
+  .footer-bottom { padding: 0.875rem 1rem; }
+  .page-header { padding: 2rem 0 1.5rem; }
+  .card-hero-body { padding: 1.375rem 1rem 1.125rem; }
+  .card-feature-body { padding: 0.75rem 0.875rem 0.875rem; }
+  .home-hero-side { flex-direction: column; }
+  .filter-inner { padding: 0.625rem 1rem; }
+  .archive-cta { padding: 2rem 0; }
+  .archive-cta-btn { padding: 0.625rem 2rem; }
+  .card-top-feature-title { font-size: 1.5rem; }
 }
 
 /* ═══════════════════════════════════════

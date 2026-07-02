@@ -35,11 +35,11 @@ export default async function ArticlePage({ params }: Props) {
 
       {/* Hero image */}
       {news.image && (
-        <div style={{ width: '100%', overflow: 'hidden', maxHeight: 520 }}>
+        <div style={{ width: '100%', overflow: 'hidden', maxHeight: 'clamp(180px, 38vw, 520px)' }}>
           <img
             src={news.image}
             alt={news.title}
-            style={{ width: '100%', height: 520, objectFit: 'cover', display: 'block' }}
+            style={{ width: '100%', height: 'clamp(180px, 38vw, 520px)', objectFit: 'cover', display: 'block' }}
           />
         </div>
       )}
