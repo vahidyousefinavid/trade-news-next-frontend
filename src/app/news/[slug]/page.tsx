@@ -48,7 +48,7 @@ export default async function ArticlePage({ params }: Props) {
         <div className="article-layout">
 
           {/* ── Article column ── */}
-          <article style={{ flex: 1, minWidth: 0, maxWidth: '52rem' }}>
+          <article className="article-main">
 
             {/* Breadcrumb */}
             <nav style={{

@@ -554,6 +554,11 @@ html[lang="en"] body { font-family: 'Inter', Arial, sans-serif; direction: ltr; 
   gap: 3.5rem;
   align-items: flex-start;
 }
+.article-main {
+  flex: 1;
+  min-width: 0;
+  max-width: 52rem;
+}
 .inner-page-container {
   padding: 2.25rem 1.5rem;
 }
@@ -568,6 +573,11 @@ html[lang="en"] body { font-family: 'Inter', Arial, sans-serif; direction: ltr; 
   .home-hero-grid { grid-template-columns: 56% 1fr; }
 }
 
+/* ── 1023px: below lg (sidebar disappears) ── */
+@media (max-width: 1023px) {
+  .article-main { max-width: 100%; }
+}
+
 /* ── 991px: tablet landscape ── */
 @media (max-width: 991px) {
   .card-grid-4 { grid-template-columns: repeat(2, 1fr); }
@@ -580,6 +590,7 @@ html[lang="en"] body { font-family: 'Inter', Arial, sans-serif; direction: ltr; 
   .card-top-feature-img { width: 100%; }
   .card-top-feature-title { font-size: 1.625rem; }
   .article-layout { gap: 2.5rem; }
+  .article-layout { flex-direction: column; }
 }
 
 /* ── 767px: tablet portrait ── */
