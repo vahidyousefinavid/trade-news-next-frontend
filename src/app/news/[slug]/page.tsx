@@ -105,8 +105,8 @@ export default async function ArticlePage({ params }: Props) {
 
             {/* Title */}
             <h1 style={{
-              fontWeight: 900, fontSize: 'clamp(1.75rem, 4vw, 2.5rem)',
-              lineHeight: 1.2, letterSpacing: '-0.015em', marginBottom: '1.25rem',
+              fontWeight: 900, fontSize: 'clamp(1.375rem, 5vw, 2.5rem)',
+              lineHeight: 1.25, letterSpacing: '-0.015em', marginBottom: '1.25rem',
             }}>
               {news.title}
             </h1>
@@ -114,7 +114,7 @@ export default async function ArticlePage({ params }: Props) {
             {/* Summary */}
             {news.summary && (
               <p style={{
-                fontSize: '1.125rem', lineHeight: 1.85, fontWeight: 500,
+                fontSize: 'clamp(1rem, 2.5vw, 1.125rem)', lineHeight: 1.85, fontWeight: 500,
                 color: 'var(--text-2)', marginBottom: '1.5rem',
                 paddingInlineStart: '1rem',
                 borderInlineStart: '4px solid var(--red)',
