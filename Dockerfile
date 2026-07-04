@@ -2,9 +2,13 @@ FROM node:18-alpine AS builder
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm install
+RUN npm ci
+# npm has a known bug resolving platform-specific optional deps for
+# @tailwindcss/oxide inside Alpine containers (npm/cli#4828) — force it.
+RUN npm install --no-save "@tailwindcss/oxide-linux-$(node -p process.arch)-musl"
 
 COPY . .
+RUN mkdir -p public
 
 ARG DOMAIN_API=http://trade-news-api:4001
 ARG NEXT_PUBLIC_API_URL
