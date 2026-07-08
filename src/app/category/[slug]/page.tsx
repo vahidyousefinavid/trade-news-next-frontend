@@ -15,7 +15,7 @@ export default async function CategoryPage({ params }: Props) {
   const news = await getAllNews({ status: 'published', categoryId: category.id });
   const featured = news[0];
   const rest = news.slice(1);
-  const color = category.color || 'var(--red)';
+  const color = category.color || 'var(--gold-d)';
 
   return (
     <div style={{ backgroundColor: 'var(--bg)' }}>
@@ -43,9 +43,9 @@ export default async function CategoryPage({ params }: Props) {
           </p>
           <Link href="/news" style={{
             display: 'inline-block', marginTop: '1.5rem',
-            color: 'var(--red)', fontWeight: 800, fontSize: '0.8rem',
+            color: 'var(--gold-d)', fontWeight: 800, fontSize: '0.8rem',
             textDecoration: 'none', letterSpacing: '0.08em',
-            textTransform: 'uppercase', borderBottom: '2px solid var(--red)', paddingBottom: '2px',
+            textTransform: 'uppercase', borderBottom: '2px solid var(--gold-d)', paddingBottom: '2px',
           }}>
             <LangText fa="بازگشت به اخبار" en="Back to News" />
           </Link>

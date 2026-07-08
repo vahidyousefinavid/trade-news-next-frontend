@@ -19,12 +19,12 @@ export function ReadingProgress() {
     <div style={{
       position: 'fixed', top: 0, left: 0, right: 0,
       height: 3, zIndex: 9999, pointerEvents: 'none',
-      background: 'rgba(200,0,10,.1)',
+      background: 'rgba(201,148,27,.12)',
     }}>
       <div style={{
         height: '100%',
         width: `${pct}%`,
-        background: 'linear-gradient(90deg, #9A0007, #C8000A)',
+        background: 'linear-gradient(90deg, #9E7113, #E4B54B)',
         transition: 'width .12s linear',
         borderRadius: '0 2px 2px 0',
       }} />

@@ -73,7 +73,7 @@ export function Header({ categories }: { categories: Category[] }) {
               return (
                 <Link key={cat.id} href={href}
                   className={'ribbon-link' + (pathname === href ? ' active' : '')}
-                  style={pathname === href ? { borderBottomColor: cat.color || 'var(--red)' } : {}}>
+                  style={pathname === href ? { borderBottomColor: cat.color || 'var(--gold-l)' } : {}}>
                   {cat.name}
                 </Link>
               );

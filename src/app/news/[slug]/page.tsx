@@ -97,7 +97,7 @@ export default async function ArticlePage({ params }: Props) {
                   href={`/category/${news.category.id}`}
                   style={{
                     fontSize: '0.7rem', fontWeight: 900, textTransform: 'uppercase',
-                    letterSpacing: '0.1em', color: news.category.color || 'var(--red)',
+                    letterSpacing: '0.1em', color: news.category.color || 'var(--gold-d)',
                     textDecoration: 'none',
                   }}
                 >
@@ -120,7 +120,7 @@ export default async function ArticlePage({ params }: Props) {
                 fontSize: 'clamp(1rem, 2.5vw, 1.125rem)', lineHeight: 1.85, fontWeight: 500,
                 color: 'var(--text-2)', marginBottom: '1.5rem',
                 paddingInlineStart: '1rem',
-                borderInlineStart: '4px solid var(--red)',
+                borderInlineStart: '4px solid var(--gold-d)',
               }}>
                 {news.summary}
               </p>
@@ -141,7 +141,7 @@ export default async function ArticlePage({ params }: Props) {
               <span style={{
                 display: 'inline-flex', alignItems: 'center', gap: '0.3rem',
                 fontWeight: 700, fontSize: '0.7rem', textTransform: 'uppercase',
-                letterSpacing: '0.08em', color: 'var(--red)',
+                letterSpacing: '0.08em', color: 'var(--gold-d)',
               }}>
                 {readingMins} <LangText fa="دقیقه مطالعه" en="min read" />
               </span>

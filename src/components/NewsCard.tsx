@@ -28,7 +28,7 @@ function HeroCard({ news }: { news: News }) {
       <div className="card-hero-body">
         {news.isBreaking && <span className="breaking-badge" style={{ marginBottom: '0.5rem', display: 'inline-block' }}>فوری</span>}
         {!news.isBreaking && news.category && (
-          <span className="cat-badge-pill" style={{ backgroundColor: news.category.color || 'var(--red)', display: 'inline-block', marginBottom: '0.5rem' }}>
+          <span className="cat-badge-pill" style={{ backgroundColor: news.category.color || 'var(--gold)', display: 'inline-block', marginBottom: '0.5rem' }}>
             {news.category.name}
           </span>
         )}
@@ -48,7 +48,7 @@ function HeroCard({ news }: { news: News }) {
 function HeroSmCard({ news }: { news: News }) {
   const { t } = useLang();
   const date = news.publishedAt || news.createdAt;
-  const smCatColor = news.category?.color || '#C8000A';
+  const smCatColor = news.category?.color || '#C9941B';
   return (
     <Link href={`/news/${news.id}`} className="card-hero-sm">
       {news.image
@@ -57,7 +57,7 @@ function HeroSmCard({ news }: { news: News }) {
       <div className="card-hero-sm-overlay" />
       <div className="card-hero-sm-body">
         {news.category && (
-          <span style={{ fontSize: '0.58rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.14em', color: news.category.color || 'var(--red)', display: 'block', marginBottom: '0.25rem' }}>
+          <span style={{ fontSize: '0.58rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.14em', color: news.category.color || 'var(--gold-l)', display: 'block', marginBottom: '0.25rem' }}>
             {news.category.name}
           </span>
         )}
@@ -74,7 +74,7 @@ function HeroSmCard({ news }: { news: News }) {
 function FeatureCard({ news, large }: { news: News; large?: boolean }) {
   const { t } = useLang();
   const date = news.publishedAt || news.createdAt;
-  const catColor = news.category?.color || 'var(--red)';
+  const catColor = news.category?.color || 'var(--gold-d)';
   return (
     <Link href={`/news/${news.id}`} className={`card-feature${large ? ' large' : ''}`}>
       <div className="card-feature-img-wrap">
@@ -91,11 +91,15 @@ function FeatureCard({ news, large }: { news: News; large?: boolean }) {
               </svg>
             </div>
           )}
-        {/* Category / breaking overlay at bottom of image */}
+        {/* Category / breaking — floating glass pill, top-start of image */}
         <div className="card-feature-cat-wrap">
           {news.isBreaking
             ? <span className="card-list-badge">فوری</span>
-            : news.category && <span className="card-feature-cat-text">{news.category.name}</span>}
+            : news.category && (
+              <span className="card-feature-cat-text" style={{ '--cat-color': catColor } as React.CSSProperties}>
+                {news.category.name}
+              </span>
+            )}
         </div>
       </div>
       <div className="card-feature-body">
@@ -124,7 +128,7 @@ function FeatureCard({ news, large }: { news: News; large?: boolean }) {
 function ListCard({ news, num }: { news: News; num?: number }) {
   const { t } = useLang();
   const date = news.publishedAt || news.createdAt;
-  const catColor = news.category?.color || 'var(--red)';
+  const catColor = news.category?.color || 'var(--gold-d)';
   return (
     <Link href={`/news/${news.id}`} className="card-list">
       {num !== undefined && (
@@ -154,7 +158,7 @@ function ListCard({ news, num }: { news: News; num?: number }) {
 function TopFeatureCard({ news }: { news: News }) {
   const { t } = useLang();
   const date = news.publishedAt || news.createdAt;
-  const catColor = news.category?.color || 'var(--red)';
+  const catColor = news.category?.color || 'var(--gold-d)';
   return (
     <Link href={`/news/${news.id}`} className="card-top-feature">
       {news.image && (
@@ -184,7 +188,7 @@ function TopFeatureCard({ news }: { news: News }) {
 function RankedCard({ news, num }: { news: News; num?: number }) {
   const { t } = useLang();
   const date = news.publishedAt || news.createdAt;
-  const catColor = news.category?.color || 'var(--red)';
+  const catColor = news.category?.color || 'var(--gold-d)';
   return (
     <Link href={`/news/${news.id}`} className="card-ranked">
       {num !== undefined && (
@@ -212,7 +216,7 @@ function RankedCard({ news, num }: { news: News; num?: number }) {
 function HeadlineCard({ news }: { news: News }) {
   const { t } = useLang();
   const date = news.publishedAt || news.createdAt;
-  const catColor = news.category?.color || 'var(--red)';
+  const catColor = news.category?.color || 'var(--gold-d)';
   return (
     <Link href={`/news/${news.id}`} className="card-headline">
       <div className="card-headline-body">
@@ -246,7 +250,7 @@ function HorizontalCard({ news }: { news: News }) {
       )}
       <div className="card-horiz-body">
         {news.category && (
-          <span style={{ fontSize: '0.58rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.14em', color: news.category.color || 'var(--red)', display: 'block', marginBottom: '0.2rem' }}>
+          <span style={{ fontSize: '0.58rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.14em', color: news.category.color || 'var(--gold-d)', display: 'block', marginBottom: '0.2rem' }}>
             {news.category.name}
           </span>
         )}
@@ -264,7 +268,7 @@ function CompactCard({ news }: { news: News }) {
   return (
     <Link href={`/news/${news.id}`} className="card-compact">
       {news.category && (
-        <span style={{ fontSize: '0.58rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.14em', color: news.category.color || 'var(--red)', display: 'block', marginBottom: '0.1rem' }}>
+        <span style={{ fontSize: '0.58rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.14em', color: news.category.color || 'var(--gold-d)', display: 'block', marginBottom: '0.1rem' }}>
           {news.category.name}
         </span>
       )}

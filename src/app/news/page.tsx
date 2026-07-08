@@ -13,7 +13,7 @@ export default async function NewsPage({ searchParams }: Props) {
   ]);
 
   const activeCat   = categories.find(c => c.id === categoryId);
-  const accentColor = activeCat?.color || 'var(--red)';
+  const accentColor = activeCat?.color || 'var(--gold-d)';
   const topStory    = news[0];
   const rest        = news.slice(1);
   const topViewed   = [...news].sort((a, b) => (b.views || 0) - (a.views || 0)).slice(0, 5);
@@ -53,7 +53,7 @@ export default async function NewsPage({ searchParams }: Props) {
               href={`/news?categoryId=${cat.id}`}
               className={categoryId === cat.id ? 'filter-chip active-color' : 'filter-chip'}
               style={categoryId === cat.id
-                ? { backgroundColor: cat.color || 'var(--red)', borderColor: 'transparent' }
+                ? { backgroundColor: cat.color || 'var(--gold-d)', borderColor: 'transparent' }
                 : {}}>
               {cat.name}
             </Link>
@@ -71,9 +71,9 @@ export default async function NewsPage({ searchParams }: Props) {
           </p>
           <Link href="/news" style={{
             display: 'inline-block', marginTop: '1.5rem',
-            color: 'var(--red)', fontWeight: 800, fontSize: '0.8rem',
+            color: 'var(--gold-d)', fontWeight: 800, fontSize: '0.8rem',
             textDecoration: 'none', letterSpacing: '0.08em',
-            textTransform: 'uppercase', borderBottom: '2px solid var(--red)',
+            textTransform: 'uppercase', borderBottom: '2px solid var(--gold-d)',
             paddingBottom: '2px',
           }}>
             <LangText fa="بازگشت به همه اخبار" en="View all articles" />

@@ -104,7 +104,7 @@ export default async function HomePage() {
           <div className="container">
             <div className="sec-head">
               <span className="sec-head-title">
-                <span className="sec-head-bar" style={{ background: 'var(--red)' }} />
+                <span className="sec-head-bar" style={{ background: 'var(--gold-grad)' }} />
                 <LangText fa="آخرین اخبار" en="Latest News" />
               </span>
               <Link href="/news" className="sec-head-link">
@@ -126,7 +126,7 @@ export default async function HomePage() {
       {categories.map((cat, ci) => {
         const catNews = allNews.filter(n => n.category?.id === cat.id);
         if (catNews.length < 3) return null;
-        const color = cat.color || 'var(--red)';
+        const color = cat.color || 'var(--gold-d)';
         const bg = ci % 2 === 0 ? 'var(--white)' : 'var(--bg)';
 
         return (
@@ -159,7 +159,7 @@ export default async function HomePage() {
           <div className="container">
             <div className="sec-head" style={{ marginBottom: '1.5rem' }}>
               <span className="sec-head-title">
-                <span className="sec-head-bar" style={{ background: 'var(--red)' }} />
+                <span className="sec-head-bar" style={{ background: 'var(--gold-grad)' }} />
                 <LangText fa="پربازدیدترین" en="Most Read" />
               </span>
               <Link href="/news" className="sec-head-link">
@@ -173,7 +173,7 @@ export default async function HomePage() {
                   <span className="home-mv-rank">{i + 1}</span>
                   <div className="home-mv-body">
                     {n.category && (
-                      <span className="home-mv-cat" style={{ color: n.category.color || 'var(--red)' }}>
+                      <span className="home-mv-cat" style={{ color: n.category.color || 'var(--gold-d)' }}>
                         {n.category.name}
                       </span>
                     )}
