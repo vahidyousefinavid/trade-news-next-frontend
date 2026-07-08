@@ -155,14 +155,14 @@ export default async function HomePage() {
           MOST VIEWED
       ══════════════════════════════════════ */}
       {mostViewed.length >= 3 && (
-        <div style={{ backgroundColor: 'var(--navy)', padding: '2.5rem 0', borderTop: '1px solid var(--rule)' }}>
+        <div style={{ backgroundColor: 'var(--bg)', padding: '2.5rem 0', borderTop: '1px solid var(--rule)' }}>
           <div className="container">
             <div className="sec-head" style={{ marginBottom: '1.5rem' }}>
-              <span className="sec-head-title" style={{ color: '#fff' }}>
+              <span className="sec-head-title">
                 <span className="sec-head-bar" style={{ background: 'var(--red)' }} />
                 <LangText fa="پربازدیدترین" en="Most Read" />
               </span>
-              <Link href="/news" className="sec-head-link" style={{ color: 'rgba(255,255,255,.35)' }}>
+              <Link href="/news" className="sec-head-link">
                 <LangText fa="مشاهده همه ←" en="View all →" />
               </Link>
             </div>
@@ -184,7 +184,7 @@ export default async function HomePage() {
                   </div>
                   {n.image && (
                     <div className="home-mv-img">
-                      <img src={n.image} alt={n.title} />
+                      <img src={n.image} alt={n.title} loading="lazy" decoding="async" />
                     </div>
                   )}
                 </Link>

@@ -22,7 +22,7 @@ function HeroCard({ news }: { news: News }) {
   return (
     <Link href={`/news/${news.id}`} className="card-hero">
       {news.image
-        ? <img src={news.image} alt={news.title} className="card-hero-img" />
+        ? <img src={news.image} alt={news.title} className="card-hero-img" loading="eager" fetchPriority="high" decoding="async" />
         : <div className="card-hero-img" style={{ background: 'linear-gradient(145deg,#0B1929,#172E47)' }} />}
       <div className="card-hero-overlay" />
       <div className="card-hero-body">
@@ -52,7 +52,7 @@ function HeroSmCard({ news }: { news: News }) {
   return (
     <Link href={`/news/${news.id}`} className="card-hero-sm">
       {news.image
-        ? <img src={news.image} alt={news.title} />
+        ? <img src={news.image} alt={news.title} loading="eager" decoding="async" />
         : <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(145deg, #0B1929 0%, ${smCatColor}44 100%)` }} />}
       <div className="card-hero-sm-overlay" />
       <div className="card-hero-sm-body">
@@ -79,7 +79,7 @@ function FeatureCard({ news, large }: { news: News; large?: boolean }) {
     <Link href={`/news/${news.id}`} className={`card-feature${large ? ' large' : ''}`}>
       <div className="card-feature-img-wrap">
         {news.image
-          ? <img src={news.image} alt={news.title} className="card-feature-img" />
+          ? <img src={news.image} alt={news.title} className="card-feature-img" loading="lazy" decoding="async" />
           : (
             <div style={{ width: '100%', height: '100%', background: `linear-gradient(145deg, ${catColor}18 0%, ${catColor}08 100%)`, display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
               <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle at 30% 50%, rgba(255,255,255,0.12) 0%, transparent 60%)' }} />
@@ -143,7 +143,7 @@ function ListCard({ news, num }: { news: News; num?: number }) {
       </div>
       {news.image && (
         <div className="card-list-img">
-          <img src={news.image} alt={news.title} />
+          <img src={news.image} alt={news.title} loading="lazy" decoding="async" />
         </div>
       )}
     </Link>
@@ -159,7 +159,7 @@ function TopFeatureCard({ news }: { news: News }) {
     <Link href={`/news/${news.id}`} className="card-top-feature">
       {news.image && (
         <div className="card-top-feature-img">
-          <img src={news.image} alt={news.title} />
+          <img src={news.image} alt={news.title} loading="eager" fetchPriority="high" decoding="async" />
         </div>
       )}
       <div className="card-top-feature-body">
@@ -226,7 +226,7 @@ function HeadlineCard({ news }: { news: News }) {
       </div>
       {news.image && (
         <div className="card-headline-img">
-          <img src={news.image} alt={news.title} />
+          <img src={news.image} alt={news.title} loading="lazy" decoding="async" />
         </div>
       )}
     </Link>
@@ -241,7 +241,7 @@ function HorizontalCard({ news }: { news: News }) {
     <Link href={`/news/${news.id}`} className="card-horiz">
       {news.image && (
         <div className="card-horiz-img">
-          <img src={news.image} alt={news.title} />
+          <img src={news.image} alt={news.title} loading="lazy" decoding="async" />
         </div>
       )}
       <div className="card-horiz-body">

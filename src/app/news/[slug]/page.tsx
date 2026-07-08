@@ -39,6 +39,9 @@ export default async function ArticlePage({ params }: Props) {
           <img
             src={news.image}
             alt={news.title}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             style={{ width: '100%', height: 'clamp(180px, 38vw, 520px)', objectFit: 'cover', display: 'block' }}
           />
         </div>
