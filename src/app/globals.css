@@ -134,9 +134,8 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   height: 56px; padding: 0 1.5rem; gap: 1.25rem;
   max-width: 1440px; margin: 0 auto;
 }
-.header-logo { display: flex; align-items: baseline; text-decoration: none; flex-shrink: 0; }
-.logo-trade { color: #fff; font-size: 1.375rem; font-weight: 900; letter-spacing: -0.03em; line-height: 1; }
-.logo-news  { color: var(--gold-l); font-size: 1.375rem; font-weight: 900; letter-spacing: -0.03em; line-height: 1; }
+.header-logo { display: flex; align-items: baseline; text-decoration: none; flex-shrink: 0; min-width: 0; }
+.site-brand { color: #fff; font-size: 1.125rem; font-weight: 800; letter-spacing: -0.005em; line-height: 1.25; white-space: nowrap; }
 .header-spacer { flex: 1; }
 .header-nav { align-items: stretch; margin-inline-start: 0.75rem; }
 
@@ -678,6 +677,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 
 /* ── 479px: mobile ── */
 @media (max-width: 479px) {
+  .site-brand { font-size: 0.9375rem; }
   .card-grid-4, .card-grid-3, .card-grid-2 { grid-template-columns: 1fr; }
   .card-list-img { display: none; }
   .card-list-num { display: none; }

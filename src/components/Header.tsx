@@ -22,8 +22,7 @@ export function Header({ categories }: { categories: Category[] }) {
       {/* Main nav row */}
       <div className="header-main" style={{ maxWidth: 1440, margin: '0 auto' }}>
         <Link href="/" className="header-logo">
-          <span className="logo-news">W</span>
-          <span className="logo-trade">NTS</span>
+          <span className="site-brand">سامانه جامع تجارت</span>
         </Link>
 
         {/* Desktop nav */}
