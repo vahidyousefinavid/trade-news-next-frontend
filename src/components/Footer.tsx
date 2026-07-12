@@ -47,8 +47,8 @@ export function Footer({ categories }: { categories: Category[] }) {
           <div>
             <h4 className="footer-title">{t.footerAbout}</h4>
             <p style={{ fontSize: '0.8125rem', lineHeight: 1.9 }}>{t.aboutText}</p>
-            <a href="mailto:news@tradenews.ir" className="footer-link" style={{ marginTop: '0.75rem' }}>
-              news@tradenews.ir
+            <a href="mailto:inbox@ntsw.ir" className="footer-link" style={{ marginTop: '0.75rem' }}>
+              news@ntsw.ir
             </a>
           </div>
         </div>
