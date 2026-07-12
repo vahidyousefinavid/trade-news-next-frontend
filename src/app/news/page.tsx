@@ -27,16 +27,16 @@ export default async function NewsPage({ searchParams }: Props) {
           <p className="page-header-eyebrow" style={{ color: accentColor }}>
             {activeCat
               ? <LangText fa="دسته‌بندی" en="Category" />
-              : <LangText fa="آرشیو اخبار" en="News Archive" />}
+              : <LangText fa="آرشیو اطلاعیه‌ها" en="Announcements Archive" />}
           </p>
           <h1 className="page-header-title">
-            {activeCat ? activeCat.name : <LangText fa="همه اخبار" en="All News" />}
+            {activeCat ? activeCat.name : <LangText fa="همه اطلاعیه‌ها" en="All Announcements" />}
           </h1>
           {activeCat?.description && (
             <p className="page-header-sub">{activeCat.description}</p>
           )}
           <p className="page-header-count">
-            {news.length} <LangText fa="خبر" en="articles" />
+            {news.length} <LangText fa="اطلاعیه" en="announcements" />
           </p>
         </div>
       </div>
@@ -67,7 +67,7 @@ export default async function NewsPage({ searchParams }: Props) {
             fontWeight: 900, fontSize: '2.25rem', letterSpacing: '-0.02em',
             color: 'var(--border-2)', lineHeight: 1.2,
           }}>
-            <LangText fa="خبری یافت نشد" en="No Articles Found" />
+            <LangText fa="اطلاعیه‌ای یافت نشد" en="No Announcements Found" />
           </p>
           <Link href="/news" style={{
             display: 'inline-block', marginTop: '1.5rem',
@@ -76,7 +76,7 @@ export default async function NewsPage({ searchParams }: Props) {
             textTransform: 'uppercase', borderBottom: '2px solid var(--gold-d)',
             paddingBottom: '2px',
           }}>
-            <LangText fa="بازگشت به همه اخبار" en="View all articles" />
+            <LangText fa="بازگشت به همه اطلاعیه‌ها" en="View all announcements" />
           </Link>
         </div>
       ) : (
@@ -90,7 +90,7 @@ export default async function NewsPage({ searchParams }: Props) {
               {topStory && (
                 <div style={{ marginBottom: '2.5rem', paddingBottom: '2.5rem', borderBottom: `2px solid var(--text)` }}>
                   <p className="section-label" style={{ color: accentColor }}>
-                    <LangText fa="مهم‌ترین خبر" en="Top Story" />
+                    <LangText fa="مهم‌ترین اطلاعیه" en="Top Announcement" />
                   </p>
                   <NewsCard news={topStory} variant="top-feature" />
                 </div>
@@ -103,7 +103,7 @@ export default async function NewsPage({ searchParams }: Props) {
                     <div className="section-head-left">
                       <span className="section-accent" style={{ backgroundColor: accentColor }} />
                       <h2 className="section-title">
-                        {rest.length}&nbsp;<LangText fa="خبر دیگر" en="more articles" />
+                        {rest.length}&nbsp;<LangText fa="اطلاعیه دیگر" en="more announcements" />
                       </h2>
                     </div>
                   </div>

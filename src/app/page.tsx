@@ -57,7 +57,7 @@ export default async function HomePage() {
         <div style={{ backgroundColor: 'var(--white)', borderBottom: '1px solid var(--rule)', overflowX: 'auto' }}>
           <div className="cat-quicknav-inner">
             <Link href="/news" className="cat-quicknav-all">
-              <LangText fa="همه اخبار" en="All News" />
+              <LangText fa="همه اطلاعیه‌ها" en="All Announcements" />
             </Link>
             {categories.map(cat => (
               <Link
@@ -105,7 +105,7 @@ export default async function HomePage() {
             <div className="sec-head">
               <span className="sec-head-title">
                 <span className="sec-head-bar" style={{ background: 'var(--gold-grad)' }} />
-                <LangText fa="آخرین اخبار" en="Latest News" />
+                <LangText fa="آخرین اطلاعیه‌ها" en="Latest Announcements" />
               </span>
               <Link href="/news" className="sec-head-link">
                 <LangText fa="مشاهده همه ←" en="View all →" />
@@ -197,10 +197,10 @@ export default async function HomePage() {
       {/* ── CTA ── */}
       <div className="archive-cta">
         <p className="archive-cta-label">
-          <LangText fa="آرشیو کامل اخبار تجاری ایران" en="Full Iranian Trade News Archive" />
+          <LangText fa="آرشیو کامل اطلاعیه‌های تجاری ایران" en="Full Iranian Trade Announcements Archive" />
         </p>
         <Link href="/news" className="archive-cta-btn">
-          <LangText fa="مشاهده همه اخبار" en="Browse All Articles" />
+          <LangText fa="مشاهده همه اطلاعیه‌ها" en="Browse All Announcements" />
         </Link>
       </div>
 

@@ -31,7 +31,7 @@ export default async function CategoryPage({ params }: Props) {
             <p className="page-header-sub">{category.description}</p>
           )}
           <p className="page-header-count">
-            {news.length} <LangText fa="خبر" en="articles" />
+            {news.length} <LangText fa="اطلاعیه" en="announcements" />
           </p>
         </div>
       </div>
@@ -39,7 +39,7 @@ export default async function CategoryPage({ params }: Props) {
       {news.length === 0 ? (
         <div className="container" style={{ padding: '6rem 1.5rem', textAlign: 'center' }}>
           <p style={{ fontWeight: 900, fontSize: '2.25rem', letterSpacing: '-0.02em', color: 'var(--border-2)' }}>
-            <LangText fa="خبری یافت نشد" en="No Articles Found" />
+            <LangText fa="اطلاعیه‌ای یافت نشد" en="No Announcements Found" />
           </p>
           <Link href="/news" style={{
             display: 'inline-block', marginTop: '1.5rem',
@@ -47,7 +47,7 @@ export default async function CategoryPage({ params }: Props) {
             textDecoration: 'none', letterSpacing: '0.08em',
             textTransform: 'uppercase', borderBottom: '2px solid var(--gold-d)', paddingBottom: '2px',
           }}>
-            <LangText fa="بازگشت به اخبار" en="Back to News" />
+            <LangText fa="بازگشت به اطلاعیه‌ها" en="Back to Announcements" />
           </Link>
         </div>
       ) : (
@@ -70,11 +70,11 @@ export default async function CategoryPage({ params }: Props) {
                 <div className="section-head-left">
                   <span className="section-accent" style={{ backgroundColor: color }} />
                   <h2 className="section-title">
-                    {rest.length}&nbsp;<LangText fa="خبر دیگر" en="more articles" />
+                    {rest.length}&nbsp;<LangText fa="اطلاعیه دیگر" en="more announcements" />
                   </h2>
                 </div>
                 <Link href="/news" className="section-view-all" style={{ color }}>
-                  <LangText fa="همه اخبار" en="All News" /> →
+                  <LangText fa="همه اطلاعیه‌ها" en="All Announcements" /> →
                 </Link>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ gap: '1.75rem' }}>

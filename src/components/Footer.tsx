@@ -17,8 +17,8 @@ export function Footer({ categories }: { categories: Category[] }) {
           {/* Brand */}
           <div style={{ gridColumn: 'span 2' }} className="md:col-span-2">
             <Link href="/" style={{ display: 'inline-flex', alignItems: 'center', marginBottom: '1rem', textDecoration: 'none' }}>
-              <span style={{ color: '#fff', fontWeight: 900, fontSize: '1.5rem', letterSpacing: '-0.03em', lineHeight: 1 }}>TRADE</span>
-              <span style={{ color: 'var(--gold-l)', fontWeight: 900, fontSize: '1.5rem', letterSpacing: '-0.03em', lineHeight: 1 }}>NEWS</span>
+              <span style={{ color: 'var(--gold-l)', fontWeight: 900, fontSize: '1.5rem', letterSpacing: '-0.03em', lineHeight: 1 }}>W</span>
+              <span style={{ color: '#fff', fontWeight: 900, fontSize: '1.5rem', letterSpacing: '-0.03em', lineHeight: 1 }}>NTS</span>
             </Link>
             <p style={{ fontSize: '0.8125rem', lineHeight: 1.9, maxWidth: '20rem' }}>{t.footerDesc}</p>
           </div>

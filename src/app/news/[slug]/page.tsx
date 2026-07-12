@@ -64,7 +64,7 @@ export default async function ArticlePage({ params }: Props) {
               </Link>
               <span>›</span>
               <Link href="/news" style={{ textDecoration: 'none', color: 'inherit' }}>
-                <LangText fa="اخبار" en="News" />
+                <LangText fa="اطلاعیه‌ها" en="Announcements" />
               </Link>
               {news.category && (
                 <>
@@ -190,7 +190,7 @@ export default async function ArticlePage({ params }: Props) {
             {related.length > 0 && (
               <div style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '2px solid var(--text)' }}>
                 <p className="section-label">
-                  <LangText fa="اخبار مرتبط" en="Related Articles" />
+                  <LangText fa="اطلاعیه‌های مرتبط" en="Related Announcements" />
                 </p>
                 <div className="card-grid-2" style={{ marginTop: '1rem' }}>
                   {related.slice(0, 4).map(n => (
@@ -213,7 +213,7 @@ export default async function ArticlePage({ params }: Props) {
                     fontSize: '0.65rem', fontWeight: 900, textTransform: 'uppercase',
                     letterSpacing: '0.15em', color: 'var(--text-3)', marginBottom: '0.5rem',
                   }}>
-                    <LangText fa="اخبار مرتبط" en="Related" />
+                    <LangText fa="اطلاعیه‌های مرتبط" en="Related" />
                   </p>
                   <hr style={{ border: 'none', borderTop: '2px solid var(--text)', marginBottom: '0.75rem' }} />
                   {related.map(n => <NewsCard key={n.id} news={n} variant="horizontal" />)}

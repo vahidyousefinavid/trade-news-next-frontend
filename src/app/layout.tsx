@@ -8,8 +8,8 @@ import { BackToTop } from '@/components/BackToTop';
 import { getAllCategories } from '@/lib/api';
 
 export const metadata: Metadata = {
-  title: 'اخبار تجارت | پورتال خبری اقتصاد و بازرگانی',
-  description: 'جامع‌ترین پوشش اخبار تجارت، اقتصاد، بازارهای مالی و کسب‌وکار',
+  title: 'اطلاع‌رسانی تجارت | پایگاه اطلاع‌رسانی اقتصاد و بازرگانی',
+  description: 'جامع‌ترین پوشش اطلاعیه‌های تجارت، اقتصاد، بازارهای مالی و کسب‌وکار',
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
