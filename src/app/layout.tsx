@@ -8,7 +8,7 @@ import { BackToTop } from '@/components/BackToTop';
 import { getAllCategories } from '@/lib/api';
 
 export const metadata: Metadata = {
-  title: 'اطلاع‌رسانی تجارت | پایگاه اطلاع‌رسانی اقتصاد و بازرگانی',
+  title: 'سامانه جامع تجارت',
   description: 'جامع‌ترین پوشش اطلاعیه‌های تجارت، اقتصاد، بازارهای مالی و کسب‌وکار',
 };
 
